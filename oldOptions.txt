@@ -1,0 +1,9 @@
+"compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "target": "ES2015",
+    "types": ["p5/global"],
+    "declaration": true,
+    "declarationDir": "./node_modules/@types",
+    "noEmit": true
+  }

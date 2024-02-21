@@ -1,26 +1,21 @@
-/**
- * @typedef {import('p5')} p5
- */
-const p5 = /** @type {p5} */ (window.p5);
-
-let mic, fft;
-function setup() {
-  createCanvas(800, 700);
-  noFill();
-  mic = new p5.AudioIn();
-  mic.start();
-  fft = new p5.FFT();
-  fft.setInput(mic);
-}
-
-function draw() {
-  background(200);
-
-  let spectrum = fft.analyze();
-
-  beginShape();
-  for (let i = 0; i < spectrum.length; i++) {
-    vertex(i, map(spectrum[i], 0, 255, height, 0));
-  }
-  endShape();
-}
+var sketch = function (s) {
+    var mic, fft;
+    s.setup = function () {
+        s.createCanvas(800, 700);
+        s.noFill();
+        mic = new p5.AudioIn();
+        mic.start();
+        fft = new p5.FFT();
+        fft.setInput(mic);
+    };
+    s.draw = function () {
+        s.background(200);
+        var spectrum = fft.analyze();
+        s.beginShape();
+        for (var i = 0; i < spectrum.length; i++) {
+            s.vertex(i, s.map(spectrum[i], 0, 255, s.height, 0));
+        }
+        s.endShape();
+    };
+};
+new p5(sketch);

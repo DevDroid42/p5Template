@@ -1,9 +1,17 @@
 {
-    "compilerOptions": {
-      "allowJs": true,
-      "checkJs": true,
-      "target": "ES2015",
-      "types": ["p5/global"],
-      "noEmit": true
-    }
+  "compilerOptions": {
+    "module": "None",
+    "jsx": "preserve",
+    "sourceMap": true,
+    "lib": [
+      "es6",
+      "dom"
+    ],
+    "allowJs": true,
+    "target": "ES2015",
+    "types": ["p5/global"],
+    "noEmit": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node"
   }
+}
