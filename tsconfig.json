@@ -1,17 +1,13 @@
 {
   "compilerOptions": {
-    "module": "None",
-    "jsx": "preserve",
+    "module": "none",
+    "noImplicitAny": false,
+    "outFile": "./build/build.js",
+    "preserveConstEnums": true,
+    "removeComments": true,
+    "rootDir": "./sketch/",
     "sourceMap": true,
-    "lib": [
-      "es6",
-      "dom"
-    ],
-    "allowJs": true,
-    "target": "ES2015",
-    "types": ["p5/global"],
-    "noEmit": true,
-    "esModuleInterop": true,
+    "target": "es6",
     "moduleResolution": "node"
   }
 }
