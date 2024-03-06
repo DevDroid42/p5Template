@@ -39,7 +39,7 @@ function tickCircles() {
       ball.position.y = clamp(ball.position.y, ball.diameter / 2, windowHeight - ball.diameter / 2);
       ball.speed.y *= -0.3;
     }
-    ball.position.add(ball.speed.mult(dTime));
+    ball.position.add(p5.Vector.mult(ball.speed, dTime));
     ball.speed.y += 80 * dTime;
     circle(ball.position.x, ball.position.y, ball.diameter);
   });
